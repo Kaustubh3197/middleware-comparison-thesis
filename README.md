@@ -39,22 +39,3 @@ The original development environment differs from the machine used to
 prepare this repository, so build steps below are documented from source
 inspection and prior notes rather than freshly verified on this machine.
 See each subfolder's README for specifics.
-
-## Author
-
-Kaustubh3197 (kpatil3120@gmail.com)
-
-## Git setup (copy-paste)
-
-```bash
-git config --global user.name "Kaustubh3197"
-git config --global user.email "kpatil3120@gmail.com"
-
-git init
-git add .
-git commit -m "Initial repo structure"
-
-git remote add origin https://github.com/Kaustubh3197/middleware-comparison-thesis.git
-git branch -M main
-git push -u origin main
-```
