@@ -41,3 +41,10 @@ Cargo.lock
 Thumbs.db
 opendds/repo.ior
 *.ior
+.env
+venv*/
+.venv/
+zenohd
+output/
+__pycache__/
+*.pyc
