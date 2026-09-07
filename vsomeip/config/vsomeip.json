@@ -1,0 +1,338 @@
+{
+  "unicast": "127.0.0.1",
+  "netmask": "255.255.255.0",
+  "routing": "adas_subscriber",
+  "logging": {
+    "level": "info",
+    "console": true,
+    "file": { "enable": false }
+  },
+  "applications": [
+    { "name": "adas_subscriber", "id": "0x0100" },
+    { "name": "radar_publisher", "id": "0x0101" }
+  ],
+  "services": [
+    {
+      "service": "0x1234",
+      "instance": "0x5678",
+      "reliable": "30508",
+      "unreliable": "30509",
+      "events": [
+        { "event": "0x8778", "is_provided": true, "is_reliable": false, "eventgroups": ["0x4465"] }
+      ],
+      "methods": [
+        { "method": "0x7010", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x4465"] }
+      ]
+    },
+    {
+      "service": "0x1234",
+      "instance": "0x5679",
+      "reliable": "30508",
+      "unreliable": "30509",
+      "events": [
+        { "event": "0x8778", "is_provided": true, "is_reliable": false, "eventgroups": ["0x4465"] }
+      ],
+      "methods": [
+        { "method": "0x7010", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x4465"] }
+      ]
+    },
+    {
+      "service": "0x1234",
+      "instance": "0x567A",
+      "reliable": "30508",
+      "unreliable": "30509",
+      "events": [
+        { "event": "0x8778", "is_provided": true, "is_reliable": false, "eventgroups": ["0x4465"] }
+      ],
+      "methods": [
+        { "method": "0x7010", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x4465"] }
+      ]
+    },
+    {
+      "service": "0x1234",
+      "instance": "0x567B",
+      "reliable": "30508",
+      "unreliable": "30509",
+      "events": [
+        { "event": "0x8778", "is_provided": true, "is_reliable": false, "eventgroups": ["0x4465"] }
+      ],
+      "methods": [
+        { "method": "0x7010", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x4465"] }
+      ]
+    },
+    {
+      "service": "0x1234",
+      "instance": "0x567C",
+      "reliable": "30508",
+      "unreliable": "30509",
+      "events": [
+        { "event": "0x8778", "is_provided": true, "is_reliable": false, "eventgroups": ["0x4465"] }
+      ],
+      "methods": [
+        { "method": "0x7010", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x4465"] }
+      ]
+    },
+    {
+      "service": "0x1234",
+      "instance": "0x567D",
+      "reliable": "30508",
+      "unreliable": "30509",
+      "events": [
+        { "event": "0x8778", "is_provided": true, "is_reliable": false, "eventgroups": ["0x4465"] }
+      ],
+      "methods": [
+        { "method": "0x7010", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x4465"] }
+      ]
+    },
+    {
+      "service": "0x2345",
+      "instance": "0x6789",
+      "reliable": "30510",
+      "events": [
+        { "event": "0x9889", "is_provided": true, "is_reliable": true, "eventgroups": ["0x5566"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x5566"] }
+      ]
+    },
+    {
+      "service": "0x2345",
+      "instance": "0x678A",
+      "reliable": "30510",
+      "events": [
+        { "event": "0x9889", "is_provided": true, "is_reliable": true, "eventgroups": ["0x5566"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x5566"] }
+      ]
+    },
+    {
+      "service": "0x2345",
+      "instance": "0x678B",
+      "reliable": "30510",
+      "events": [
+        { "event": "0x9889", "is_provided": true, "is_reliable": true, "eventgroups": ["0x5566"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x5566"] }
+      ]
+    },
+    {
+      "service": "0x2345",
+      "instance": "0x678C",
+      "reliable": "30510",
+      "events": [
+        { "event": "0x9889", "is_provided": true, "is_reliable": true, "eventgroups": ["0x5566"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x5566"] }
+      ]
+    },
+    {
+      "service": "0x2345",
+      "instance": "0x678D",
+      "reliable": "30510",
+      "events": [
+        { "event": "0x9889", "is_provided": true, "is_reliable": true, "eventgroups": ["0x5566"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x5566"] }
+      ]
+    },
+    {
+      "service": "0x2345",
+      "instance": "0x678E",
+      "reliable": "30510",
+      "events": [
+        { "event": "0x9889", "is_provided": true, "is_reliable": true, "eventgroups": ["0x5566"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x5566"] }
+      ]
+    },
+    {
+      "service": "0x3456",
+      "instance": "0x7890",
+      "reliable": "30511",
+      "events": [
+        { "event": "0xAABB", "is_provided": true, "is_reliable": true, "eventgroups": ["0x6677"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x6677"] }
+      ]
+    },
+    {
+      "service": "0x3456",
+      "instance": "0x7891",
+      "reliable": "30511",
+      "events": [
+        { "event": "0xAABB", "is_provided": true, "is_reliable": true, "eventgroups": ["0x6677"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x6677"] }
+      ]
+    },
+    {
+      "service": "0x3456",
+      "instance": "0x7892",
+      "reliable": "30511",
+      "events": [
+        { "event": "0xAABB", "is_provided": true, "is_reliable": true, "eventgroups": ["0x6677"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x6677"] }
+      ]
+    },
+    {
+      "service": "0x3456",
+      "instance": "0x7893",
+      "reliable": "30511",
+      "events": [
+        { "event": "0xAABB", "is_provided": true, "is_reliable": true, "eventgroups": ["0x6677"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x6677"] }
+      ]
+    },
+    {
+      "service": "0x3456",
+      "instance": "0x7894",
+      "reliable": "30511",
+      "events": [
+        { "event": "0xAABB", "is_provided": true, "is_reliable": true, "eventgroups": ["0x6677"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x6677"] }
+      ]
+    },
+    {
+      "service": "0x3456",
+      "instance": "0x7895",
+      "reliable": "30511",
+      "events": [
+        { "event": "0xAABB", "is_provided": true, "is_reliable": true, "eventgroups": ["0x6677"] }
+      ],
+      "clients": [
+        { "id": "0x0100", "eventgroups": ["0x6677"] }
+      ]
+    },
+    {
+      "service": "0x4567",
+      "instance": "0x8A00",
+      "reliable": "30512",
+      "events": [
+        { "event": "0xCA01", "is_provided": true, "is_reliable": true, "eventgroups": ["0xCA1B"] }
+      ],
+      "methods": [
+        { "method": "0xCA02", "is_provided": true, "is_reliable": true },
+        { "method": "0xCA03", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0101", "eventgroups": ["0xCA1B"] }
+      ]
+    },
+    {
+      "service": "0x4567",
+      "instance": "0x8A01",
+      "reliable": "30512",
+      "events": [
+        { "event": "0xCA01", "is_provided": true, "is_reliable": true, "eventgroups": ["0xCA1B"] }
+      ],
+      "methods": [
+        { "method": "0xCA02", "is_provided": true, "is_reliable": true },
+        { "method": "0xCA03", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0101", "eventgroups": ["0xCA1B"] }
+      ]
+    },
+    {
+      "service": "0x4567",
+      "instance": "0x8A02",
+      "reliable": "30512",
+      "events": [
+        { "event": "0xCA01", "is_provided": true, "is_reliable": true, "eventgroups": ["0xCA1B"] }
+      ],
+      "methods": [
+        { "method": "0xCA02", "is_provided": true, "is_reliable": true },
+        { "method": "0xCA03", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0101", "eventgroups": ["0xCA1B"] }
+      ]
+    },
+    {
+      "service": "0x4567",
+      "instance": "0x8A03",
+      "reliable": "30512",
+      "events": [
+        { "event": "0xCA01", "is_provided": true, "is_reliable": true, "eventgroups": ["0xCA1B"] }
+      ],
+      "methods": [
+        { "method": "0xCA02", "is_provided": true, "is_reliable": true },
+        { "method": "0xCA03", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0101", "eventgroups": ["0xCA1B"] }
+      ]
+    },
+    {
+      "service": "0x4567",
+      "instance": "0x8A04",
+      "reliable": "30512",
+      "events": [
+        { "event": "0xCA01", "is_provided": true, "is_reliable": true, "eventgroups": ["0xCA1B"] }
+      ],
+      "methods": [
+        { "method": "0xCA02", "is_provided": true, "is_reliable": true },
+        { "method": "0xCA03", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0101", "eventgroups": ["0xCA1B"] }
+      ]
+    },
+    {
+      "service": "0x4567",
+      "instance": "0x8A05",
+      "reliable": "30512",
+      "events": [
+        { "event": "0xCA01", "is_provided": true, "is_reliable": true, "eventgroups": ["0xCA1B"] }
+      ],
+      "methods": [
+        { "method": "0xCA02", "is_provided": true, "is_reliable": true },
+        { "method": "0xCA03", "is_provided": true, "is_reliable": true }
+      ],
+      "clients": [
+        { "id": "0x0101", "eventgroups": ["0xCA1B"] }
+      ]
+    }
+  ],
+  "service-discovery": {
+    "enable": true,
+    "multicast": "224.0.0.1",
+    "port": "30490",
+    "protocol": "udp",
+    "initial_delay_min": 50,
+    "initial_delay_max": 500,
+    "repetitions_base_delay": 500,
+    "repetitions_max": 5
+  }
+}
