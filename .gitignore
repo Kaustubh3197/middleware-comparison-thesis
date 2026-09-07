@@ -1,0 +1,41 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# Compiled objects/binaries
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.lib
+
+# OpenDDS/TAO generated files (regenerated from .idl at build time)
+*TypeSupportImpl.*
+*TypeSupportC.*
+*TypeSupportS.*
+*C.h
+*C.cpp
+*S.h
+*S.cpp
+*_export.h
+
+# vsomeip runtime artifacts
+*.log
+
+# Zenoh/Rust
+target/
+Cargo.lock
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+
+# OS cruft
+.DS_Store
+Thumbs.db
