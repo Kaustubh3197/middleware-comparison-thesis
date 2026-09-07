@@ -1,0 +1,88 @@
+module Adas {
+
+  // ====================== Core 3 use-cases ======================
+
+  @topic
+  struct Heartbeat {
+    @key string radar_id;
+    unsigned long ts_ms;
+    unsigned long seq;
+    unsigned long health;
+  };
+
+  struct RadarObject {
+    unsigned long pos_x;
+    long          pos_y;
+    unsigned long pos_z;
+    unsigned long vel_x, vel_y, vel_z;
+    unsigned long acc_x, acc_y, acc_z;
+    unsigned long size_x, size_y, size_z;
+    octet         type;
+  };
+
+  @topic
+  struct ObjectsMsg {
+    @key string radar_id;
+    unsigned long ts_ms;
+    unsigned long seq;
+    sequence<RadarObject> objects;
+  };
+
+  struct Detection {
+    unsigned long pos_x, pos_y, pos_z;
+    unsigned long vel_x, vel_y, vel_z;
+    unsigned long acc_x, acc_y, acc_z;
+    unsigned long size_1, size_2, size_3, size_4;
+    unsigned long size_5, size_6, size_7, size_8;
+    octet         type;
+  };
+
+  @topic
+  struct DetectionsMsg {
+    @key string radar_id;
+    unsigned long ts_ms;
+    unsigned long seq;
+    sequence<Detection> detections;
+  };
+
+  // ====================== Calibration use-case ======================
+  // All calibration payloads are 4×u32 carried in d1..d4 to mirror zenoh layout.
+
+  @topic
+  struct CalibrationRequest {
+    @key string radar_id;         // empty string = broadcast
+    unsigned long d1;             // req_id
+    unsigned long d2;             // arbitrary
+    unsigned long d3;             // random A
+    unsigned long d4;             // random B
+  };
+
+  @topic
+  struct CalibrationResponse {
+    @key string radar_id;         // radar that responded
+    unsigned long d1;             // req_id (echo)
+    unsigned long d2;             // radar response ts (ms, u32)
+    unsigned long d3;             // random C
+    unsigned long d4;             // random D
+  };
+
+  // Same struct used for both directions; we separate by topic name.
+  @topic
+  struct CalibrationAck {
+    @key string radar_id;         // sender
+    unsigned long d1;             // req_id (echo)
+    unsigned long d2;             // sender ts (radar-rx-ts or ecu-rx-ts)
+    unsigned long d3;             // echo data
+    unsigned long d4;             // echo data
+  };
+
+  // Presence / ready beacons from radar
+  @topic
+  struct CalibrationReady {
+    @key string radar_id;
+    unsigned long d1;
+    unsigned long d2;
+    unsigned long d3;
+    unsigned long d4;
+  };
+};
