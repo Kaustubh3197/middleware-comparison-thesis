@@ -65,7 +65,7 @@ middleware rather than the application data model.
 
 - [x] OpenDDS PoC — source added, README documented
 - [x] vsomeip PoC — source added, README documented
-- [ ] Zenoh PoC — in progress
+- [x] Zenoh PoC — source added, README documented
 
 ## Notes
 
